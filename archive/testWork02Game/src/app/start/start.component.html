@@ -1,0 +1,73 @@
+<div class="start-content" (click)="outsideClick($event)">
+  <h1>
+    <span>C</span>
+    <span>A</span>
+    <span>R</span>
+    <span>D </span>
+    <span>G</span>
+    <span>A</span>
+    <span>M</span>
+    <span>E</span>
+  </h1>
+
+  <form class="start-content__form" [formGroup]='form' (ngSubmit)="startGame()">
+    <label for="nickname">Enter your name
+      <input type="text" name="nickname" formControlName="nickname" maxlength="14" (input)="nicknameInputFilter()">
+      <button type="button" class="ref-btn" [@rotateBtn]="rotateBtnState" (click)="refreshNickname()"></button>
+    </label>
+
+    <div class="checkboxes">
+      <div class="main checkboxes__checkbox" *ngFor="let item of checklist">
+        <label [ngStyle]="{'pointer-events': item.isSelected ? 'none':'all'}">
+          <input type="checkbox" value="{{item.id}}" name="{{item.value}}" [checked]="item.isSelected"
+            (change)="isAllSelected($event,item)" />
+          <span class="geek-mark"></span>
+          {{item.value}}
+        </label>
+      </div>
+
+      <div class="checkboxes__select">
+        <label for="numberOfCard">Cards
+          <select name="numberOfCard" formControlName="numberOfCard">
+            <option value="10">10</option>
+            <option value="20">20</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <button class="btn" type="submit" [disabled]="form.invalid">Start game</button>
+    <button class="cup-btn" type="button" (click)="this.recordsState = this.recordsState === 'hide'? 'show': 'hide'">
+      <div class="badge"></div>
+    </button>
+  </form>
+
+  <div class="all-results" [@hideRecords]="recordsState">
+    <p>RECORDS</p>
+    <button class="hide-btn" (click)="this.recordsState = this.recordsState === 'hide'? 'show': 'hide'"></button>
+
+    <div class="records-buttons">
+      <p>Cards:</p>
+      <button class="rec-but" type="button" [ngClass]="{'active': buttonsActive}"
+        (click)="changeRecordsData(10)">10</button>
+      <button class="rec-but" type="button" [ngClass]="{'active': !buttonsActive}"
+        (click)="changeRecordsData(20)">20</button>
+    </div>
+
+    <table style="width:100%">
+      <tr>
+        <th class="place">Place</th>
+        <th class="nick"> Nick</th>
+        <th class="time">Time</th>
+        <th class="step">Step</th>
+      </tr>
+      <tr *ngFor="let item of currentResults; let idx = index">
+        <td class="place">{{idx+1}}</td>
+        <td class="nick">{{item.nickname}}</td>
+        <td class="time">{{item.time}} s</td>
+        <td class="step">{{item.steps}}</td>
+      </tr>
+    </table>
+
+  </div>
+</div>

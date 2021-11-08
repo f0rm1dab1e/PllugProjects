@@ -1,0 +1,45 @@
+<div class="win-content" (click)="outsideClick($event)">
+  <div class="congratulations" *ngIf="winUser">
+    <h2>Congratulations <span>{{winUser.nickname}}</span>, you are winner</h2>
+    <button class="cup-btn" type="button" (click)="recordsState = recordsState === 'hide'? 'show': 'hide'">
+      <div class="badge"></div>
+    </button>
+    <p>Steps:</p>
+    <div class="congratulations__user-data">
+      <span>{{winUser.steps}}</span>
+    </div>
+    <p>Time:</p>
+    <div class="congratulations__user-data">
+      <span>{{winUser.time}} sec</span>
+    </div>
+    <button routerLink="/" class="btn">Restart</button>
+  </div>
+  <div class="all-results" [@hideRecords]="recordsState">
+    <p>RECORDS</p>
+    <button class="hide-btn" (click)="recordsState = recordsState === 'hide'? 'show': 'hide'"></button>
+
+    <div class="records-buttons">
+      <p>Cards:</p>
+      <button class="rec-but" type="button" [ngClass]="{'active': buttonsActive}"
+        (click)="changeRecordsData(10)">10</button>
+      <button class="rec-but" type="button" [ngClass]="{'active': !buttonsActive}"
+        (click)="changeRecordsData(20)">20</button>
+    </div>
+
+    <table style="width:100%">
+      <tr>
+        <th class="place">Place</th>
+        <th class="nick"> Nick</th>
+        <th class="time">Time</th>
+        <th class="step">Step</th>
+      </tr>
+      <tr *ngFor="let item of currentResults; let idx = index">
+        <td class="place">{{idx+1}}</td>
+        <td class="nick">{{item.nickname}}</td>
+        <td class="time">{{item.time}} s</td>
+        <td class="step">{{item.steps}}</td>
+      </tr>
+    </table>
+
+  </div>
+</div>

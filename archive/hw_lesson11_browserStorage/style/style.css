@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+.page {
+  background-color: #ffffff;
+  overflow: auto;
+  font-size: 18px;
+  font-weight: 550;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.content {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 50px;
+  width: 600px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.content > h1 {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.content > form {
+  margin-top: 70px;
+  position: relative;
+}
+
+.content > form > input {
+  width: 350px;
+  height: 35px;
+  border-radius: 50px;
+  padding: 15px;
+  border: 1px solid #9b9b9b;
+}
+
+.content > form > .btn {
+  position: absolute;
+  right: 4px;
+  top: 2px;
+  border-radius: 50px;
+  width: 31px;
+  height: 31px;
+  background: #379f6f url("img/darkPlay.png") 70% 50%/70% no-repeat;
+}
+
+.content > form > .btn:hover {
+  background: #40b880 url("img/darkPlay.png") 70% 50%/70% no-repeat;
+}
+
+.content > form > .btn:active {
+  background: #15a05f url("img/darkPlay.png") 70% 50%/70% no-repeat;
+}
+
+.content .trackers {
+  width: 500px;
+}
+
+.content .trackers__tracker {
+  width: 100%;
+  min-height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #9b9b9b;
+  margin: 1.5rem 0;
+  color: #379f6f;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content .trackers__tracker > p {
+  width: 200px;
+  pointer-events: none;
+}
+
+.content .trackers__tracker > span {
+  pointer-events: none;
+  width: 80px;
+  margin-left: 5rem;
+}
+
+.content .trackers__tracker > .buttons > .pause-btn {
+  background: url("img/pause.png") 0 0/cover;
+  width: 25px;
+  height: 25px;
+  border: 2px solid black;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.content .trackers__tracker > .buttons > .remove-btn {
+  background: url("img/minus.png") 0 0/contain;
+  width: 25px;
+  height: 25px;
+  border: 2px solid #fe3300;
+  border-radius: 50%;
+}
+
+.content .trackers .pause {
+  color: black;
+}
+
+.content .trackers .pause > .buttons > .pause-btn {
+  background: url("img/darkPlay.png") 0 0/cover;
+}
+
+@media (max-width: 767px) {
+  .page {
+    font-size: 14px;
+  }
+  .content {
+    width: 320px;
+  }
+  .content > h1 {
+    font-size: 30px;
+  }
+  .content > form > input {
+    width: 250px;
+    height: 35px;
+  }
+  .content .trackers {
+    width: 310px;
+  }
+  .content .trackers__tracker {
+    width: 100%;
+    min-height: 40px;
+  }
+  .content .trackers__tracker > p {
+    width: 130px;
+  }
+  .content .trackers__tracker > span {
+    width: 50px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+// zero style
+
+.page {
+  background-color: #ffffff;
+  overflow: auto;
+  font-size: 18px;
+  font-weight: 550;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.content {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50px;
+  width: 600px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+
+  &>h1 {
+    font-size: 35px;
+    font-weight: 600;
+  }
+
+  &>form {
+    margin-top: 70px;
+    position: relative;
+
+    &>input {
+      width: 350px;
+      height: 35px;
+      border-radius: 50px;
+      padding: 15px;
+      border: 1px solid #9b9b9b;
+
+    }
+
+    &>.btn {
+      position: absolute;
+      right: 4px;
+      top: 2px;
+      border-radius: 50px;
+      width: 31px;
+      height: 31px;
+      background: #379f6f url('img/darkPlay.png') 70% 50% / 70% no-repeat;
+
+      &:hover {
+        background: #40b880 url('img/darkPlay.png') 70% 50% / 70% no-repeat;
+      }
+
+      &:active {
+        background: #15a05f url('img/darkPlay.png') 70% 50% / 70% no-repeat;
+      }
+    }
+  }
+
+  .trackers {
+    width: 500px;
+
+
+    &__tracker {
+      width: 100%;
+      min-height: 50px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border-bottom: 1px solid #9b9b9b;
+      margin: 1.5rem 0;
+      color: #379f6f;
+      align-items: center;
+
+      &>p {
+        width: 200px;
+        pointer-events: none;
+      }
+
+      &>span {
+        pointer-events: none;
+        width: 80px;
+        margin-left: 5rem;
+      }
+
+      &>.buttons {
+        &>.pause-btn {
+          background: url('img/pause.png') 0 0 / cover;
+          width: 25px;
+          height: 25px;
+          border: 2px solid black;
+          border-radius: 50%;
+          margin: 5px;
+        }
+
+        &>.remove-btn {
+          background: url('img/minus.png') 0 0 / contain;
+          width: 25px;
+          height: 25px;
+          border: 2px solid #fe3300;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .pause {
+      color: black;
+
+      &>.buttons {
+        &>.pause-btn {
+          background: url('img/darkPlay.png') 0 0 / cover;
+
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:767px) {
+  .page {
+    font-size: 14px;
+  }
+
+  .content {
+    width: 320px;
+    &>h1 {
+      font-size: 30px;
+    }
+
+    &>form {
+      &>input {
+        width: 250px;
+        height: 35px;
+      }
+    }
+
+    .trackers {
+      width: 310px;
+      &__tracker {
+        width: 100%;
+        min-height: 40px;
+        &>p {
+          width: 130px;
+        }
+        &>span {
+          width: 50px;
+        }
+      }     
+    }
+  }
+}

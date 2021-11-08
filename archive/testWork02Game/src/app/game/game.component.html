@@ -1,0 +1,17 @@
+<div class="game-content">
+  <div class="game-content__panel-info" *ngIf="userData">
+    <h3>Player: <span>{{userData.nickname}}</span></h3>
+    <p>Timer: <span>{{time}} s</span></p>
+    <p>Steps: <span>{{steps}}</span></p>
+  </div>
+  <div class="game-content__cards">
+    <div class="cards__card" *ngFor="let urlImg of elements; let idx = index" [@rotateCard]="cardsState[idx]"
+      (click)="changeState(idx)">
+      <div class="front face">
+      </div>
+      <div class="back face center">
+        <img src="{{urlImg}}" />
+      </div>
+    </div>
+  </div>
+</div>

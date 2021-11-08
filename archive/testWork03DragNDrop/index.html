@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/style.css">
+  <title>Drag N drop</title>
+</head>
+
+<body>
+
+  <div class="content">
+    <h1>FILES DOWNLOADER</h1>
+    <div class="drag-n-drop-container">
+      <div id="drag-n-drop-area" class="drag-n-drop-container__area">
+        <p>Drop Here</p>
+      </div>
+      <form class="drag-n-drop-container__form">
+
+        <input type="file" id="fileEl" multiple accept="image/png, image/jpeg, application/vnd.ms-excel, text/plain">
+        <label for="fileEl" class="button">BROWSE FILES</label>
+        <div class="error">
+          <span>File is too large or doesn't match type</span>
+        </div>
+      </form>
+
+    </div>
+    <div id="preview-container" class="preview-container">
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

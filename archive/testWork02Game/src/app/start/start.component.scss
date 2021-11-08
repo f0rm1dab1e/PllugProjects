@@ -1,0 +1,418 @@
+.start-content {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: radial-gradient(circle, rgba(231, 232, 234, 1) 0%, rgba(152, 152, 152, 1) 100%);
+  overflow: auto;
+
+  &__form {
+    width: 500px;
+    height: 300px;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: space-evenly;
+    box-shadow: 0px 1px 0px rgb(54, 54, 54), 0px 2px 0px #363636, 0px 3px 0px rgb(53, 53, 53), 0px 4px 0px #292929, 0px 5px 0px rgb(37, 37, 37), 0px 6px 1px rgba(0, 0, 0, 0.1), 0px 0px 5px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 3px 5px rgba(0, 0, 0, 0.2), -4px 8px 8px rgba(0, 0, 0, 0.1), -8px 16px 16px rgba(0, 0, 0, 0.37), -16px 32px 32px rgba(0, 0, 0, 0.25), -32px 64px 64px rgba(0, 0, 0, 0.25);
+
+    &>label {
+      font-size: 24px;
+      font-weight: 600;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 90px;
+      position: relative;
+
+      &>.ref-btn {
+        background: url('/assets/img/ico/refresh.png') 0 0 / cover;
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        top: 53px;
+        right: 5px;
+      }
+
+      &>input[type=text] {
+        border-radius: 8px;
+        padding: 0 35px;
+        width: 100%;
+        height: 40px;
+        transition: border .2s ease-in-out;
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+
+        &::placeholder {
+          color: var(--gray-color);
+        }
+
+        &:focus {
+          border: 1px solid var(--input-active-color);
+        }
+      }
+    }
+
+    .checkboxes {
+      width: 80%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+
+      &__checkbox {
+        &>label {
+          display: block;
+          position: relative;
+          cursor: pointer;
+          font-size: 20px;
+          user-select: none;
+
+          &>input[type=checkbox] {
+            width: 20px;
+            height: 20px;
+            visibility: hidden;
+
+            &:checked~.geek-mark {
+              background-color: var(--orange-color);
+
+              &:after {
+                display: block;
+              }
+            }
+          }
+
+          &>.geek-mark {
+            transform: translateY(3px);
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background-color: white;
+
+            &:after {
+              content: "";
+              position: absolute;
+              left: 6px;
+              bottom: 5px;
+              width: 8px;
+              height: 13px;
+              border: solid white;
+              border-width: 0 4px 4px 0;
+              -webkit-transform: rotate(45deg);
+              -ms-transform: rotate(45deg);
+              transform: rotate(45deg);
+              pointer-events: none;
+            }
+          }
+        }
+      }
+    }
+
+    .checkboxes__select {
+      margin-left: 1rem;
+
+      &>label {
+        margin-bottom: 5px;
+
+        select {
+          border-radius: 8px;
+          width: 55px;
+          height: 35px;
+          font-size: 24px;
+          font-weight: 540;
+        }
+      }
+    }
+  }
+
+  &>h1 {
+    font-weight: 700;
+    font-size: 70px;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    cursor: pointer;
+    user-select: none;
+    transform: translateX(-50%);
+    text-shadow: 1px 1px 1px #919191,
+      1px 2px 1px #686868,
+      1px 3px 1px #6b6b6b,
+      1px 4px 1px #646464,
+      1px 18px 6px rgba(16, 16, 16, 0.4),
+      1px 22px 10px rgba(16, 16, 16, 0.2),
+      1px 25px 35px rgba(16, 16, 16, 0.2),
+      1px 30px 60px rgba(16, 16, 16, 0.4);
+    color: var(--dark-color);
+    white-space: nowrap;
+
+    & :nth-child(-n+4) {
+      color: var(--orange-color);
+    }
+
+    &>span {
+      transition: all .4s ease;
+      display: inline-block;
+
+      &:hover {
+        transform: scale(1.2);
+
+      }
+    }
+  }
+
+  .all-results {
+    width: 400px;
+    height: 420px;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-bottom-left-radius: 30px;
+    padding: 1rem;
+    box-shadow: 0px 1px 0px rgb(54, 54, 54), 0px 2px 0px #363636, 0px 3px 0px rgb(53, 53, 53), 0px 4px 0px #292929, 0px 5px 0px rgb(37, 37, 37), 0px 6px 1px rgba(0, 0, 0, 0.1), 0px 0px 5px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 3px 5px rgba(0, 0, 0, 0.2), -4px 8px 8px rgba(0, 0, 0, 0.1), -8px 16px 16px rgba(0, 0, 0, 0.37), -16px 32px 32px rgba(0, 0, 0, 0.25), -32px 64px 64px rgba(0, 0, 0, 0.25);
+    transform: translateY(-115%);
+
+    &>p {
+      text-align: center;
+      color: var(--orange-color);
+      font-size: 24px;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .records-buttons {
+      &>p {
+        display: inline;
+      }
+
+      &>.rec-but {
+        width: 80px;
+        height: 25px;
+        border-radius: 20px 20px 0 0;
+        color: var(--black-color);
+        font-weight: 700;
+        font-size: 20px;
+        background-color: var(--dark-gray-color);
+        margin: 0 3px;
+
+        &:hover {
+          background-color: #adadad;
+        }
+      }
+
+      .active {
+        background-color: var(--orange-color);
+
+        &:hover {
+          background-color: var(--orange-hover-color);
+        }
+      }
+    }
+
+    &>table {
+      th {
+        text-align: start;
+        color: var(--dark-gray-color);
+      }
+
+      td {
+        white-space: nowrap;
+        text-align: start;
+      }
+
+      .place,
+      .step {
+        width: 60px;
+      }
+
+      .nick {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 160px;
+        display: inline-block;
+      }
+
+      .time {
+        width: 90px;
+      }
+    }
+  }
+}
+
+.cup-btn {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: url('/assets/img/ico/cup.png') 0 0 / cover;
+  z-index: 2;
+
+  .badge {
+    animation: pulse 2s infinite;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #ffa800;
+    z-index: 0;
+  }
+}
+
+.hide-btn {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  background: url('/assets/img/ico/x.png') 0 0 / cover;
+  filter: invert(45%) sepia(86%) saturate(2474%) hue-rotate(335deg) brightness(114%) contrast(115%);
+  z-index: 2;
+
+  &:hover {
+    filter: invert(37%) sepia(78%) saturate(742%) hue-rotate(328deg) brightness(89%) contrast(96%);
+  }
+
+  &:active {
+    filter: invert(25%) sepia(43%) saturate(1516%) hue-rotate(331deg) brightness(103%) contrast(94%);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.4;
+    transform: scale(0.6);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+@media(max-width:992px) {
+  .start-content {
+    &>h1 {
+      font-size: 60px;
+    }
+  }
+}
+
+@media(max-width:767px) {
+  .start-content {
+    &>h1 {
+      font-size: 40px;
+    }
+
+    &__form {
+      width: 310px;
+      height: 300px;
+      top: 170px;
+
+      &>label {
+        font-size: 20px;
+        height: 90px;
+
+        &>.ref-btn {
+          width: 25px;
+          height: 25px;
+          top: 61px;
+          right: 30px;
+        }
+
+        &>input[type=text] {
+          padding: 0 27px;
+          width: 80%;
+          height: 30px;
+          font-size: 18px;
+        }
+      }
+
+      .checkboxes {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        &__checkbox {
+          &>label {
+            font-size: 18px;
+            margin-bottom: 5px;
+
+            &>input[type=checkbox] {
+              margin-left: 3px;
+            }
+          }
+        }
+      }
+
+      .checkboxes__select {
+        margin-left: 1rem;
+        position: absolute;
+        right: 15px;
+        top: 159px;
+
+        &>label {
+          margin-bottom: 5px;
+
+          select {
+            height: 25px;
+            font-size: 22px;
+          }
+        }
+      }
+    }
+
+    .all-results {
+      width: 310px;
+      height: 400px;
+
+      &>p {
+        font-size: 22px;
+      }
+
+      &>table {
+        font-size: 18px;
+
+        th {
+          text-align: start;
+        }
+
+        td {
+          text-align: start;
+        }
+
+        .nick {
+          width: 130px;
+        }
+
+        .place,
+        .step {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .cup-btn {
+    width: 40px;
+    height: 40px;
+    top: 20px;
+    right: 20px;
+
+    .badge {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

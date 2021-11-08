@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/style.css">
+  <title>Canvas Paint</title>
+</head>
+
+<body>
+  <div class="content">
+    <div class="instruments">
+
+      <div class="instruments__mouse-color">
+        <div class="instruments__button">
+          <input id="main-bnt-color" type="color" name="head" value="#000000">
+          <img src="style/img/ico/leftclick.png">
+          <img src="style/img/ico/rightckick.png">
+          <input id="context-menu-bnt-color" type="color" name="head" value="#ffffff">
+        </div>
+
+        <div id="colors" class="colors">
+          <div style="background-color: #000000;" class="color"></div>
+          <div style="background-color: #ffffff;" class="color"></div>
+          <div style="background-color: #c92327;" class="color"></div>
+          <div style="background-color: #e65e2e;" class="color"></div>
+          <div style="background-color: #90a13b;" class="color"></div>
+          <div style="background-color: #fddf41;" class="color"></div>
+          <div style="background-color: #335594;" class="color"></div>
+          <div style="background-color: #52c0b5;" class="color"></div>
+          <div style="background-color: #cb1c69;" class="color"></div>
+          <div style="background-color: #231f20;" class="color"></div>
+        </div>
+      </div>
+
+      <input id="lineWidth" class="width-range" type="range" min="1" max="25" step="1" value="8" orient="vertical">
+
+      <div class="tools">
+        <button id="pencil" class="tool active" title="pencil"></button>
+        <button id="eraser" class="tool" title="eraser"></button>
+        <button id="line" class="tool" title="line"></button>
+        <button id="circle" class="tool" title="circle"></button>
+        <button id="rectangle" class="tool" title="rectangle"></button>
+        <button id="right-triangle" class="tool" title="right-triangle"></button>
+        <button id="star" class="tool" title="star"></button>
+        <button id="cloudlet" class="tool" title="cloudlet"></button>
+        <label for="fill">Fill item
+          <input id="fill-checkbox" type="checkbox" name="fill">
+        </label>
+      </div>
+
+      <div class="buttons">
+        <a class="save-btn" id="save-canvas" download="YourFileName.jpg">Save</a>
+        <button class="clr-btn" id="clean-canvas">Clean</button>
+      </div>
+    </div>
+    <canvas id="canvas" class="canvas" width="750" height="500"></canvas>
+  </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,208 @@
+.game-content {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: radial-gradient(circle, rgba(231, 232, 234, 1) 0%, rgba(152, 152, 152, 1) 100%);
+  display: flex;
+  overflow: auto;
+  justify-content: center;
+  align-items: flex-start;
+
+  &__panel-info {
+    background-color: var(--black-color);
+    color: var(--white-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 180px;
+    width: 160px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: flex-start;
+    justify-content: space-around;
+    border-bottom-right-radius: 12px;
+    box-shadow: 0px 1px 0px rgb(54, 54, 54), 0px 2px 0px #363636, 0px 3px 0px rgb(53, 53, 53), 0px 4px 0px #292929, 0px 5px 0px rgb(37, 37, 37), 0px 6px 1px rgba(0, 0, 0, 0.1), 0px 0px 5px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 3px 5px rgba(0, 0, 0, 0.2), -4px 8px 8px rgba(0, 0, 0, 0.1), -8px 16px 16px rgba(0, 0, 0, 0.37), -16px 32px 32px rgba(0, 0, 0, 0.25), -32px 64px 64px rgba(0, 0, 0, 0.25);
+
+    &>h3 {
+      &>span {
+        color: var(--orange-color);
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 140px;
+        display: inline-block;
+        margin-bottom: -5px;
+      }
+    }
+  }
+
+  &__cards {
+    width: 870px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: .5rem;
+    justify-content: center;
+    align-content: flex-start;
+    background: var(--gray-color);
+    margin-top: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 1px 0px rgb(54, 54, 54), 0px 2px 0px #363636, 0px 3px 0px rgb(53, 53, 53), 0px 4px 0px #292929, 0px 5px 0px rgb(37, 37, 37), 0px 6px 1px rgba(0, 0, 0, 0.1), 0px 0px 5px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 3px 5px rgba(0, 0, 0, 0.2), -4px 8px 8px rgba(0, 0, 0, 0.1), -8px 16px 16px rgba(0, 0, 0, 0.37), -16px 32px 32px rgba(0, 0, 0, 0.25), -32px 64px 64px rgba(0, 0, 0, 0.25);
+
+    .cards__card {
+      box-shadow: 0px 1px 0px rgb(54, 54, 54), 0px 2px 0px #363636, 0px 3px 0px rgb(53, 53, 53), 0px 4px 0px #292929, 0px 5px 0px rgb(80, 80, 80), 0px 6px 1px rgba(0, 0, 0, 0.1), 0px 0px 5px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 3px 5px rgba(0, 0, 0, 0.2), -4px 8px 8px rgba(0, 0, 0, 0.1), -8px 16px 16px rgba(0, 0, 0, 0.37);
+      background: url('https://images.unsplash.com/photo-1609709688557-a8990f3ba16b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80') 50% 20%/cover;
+      width: 150px;
+      height: 150px;
+      transform-style: preserve-3d;
+      transition: all .7s linear;
+      margin: 10px;
+      border-radius: 8px;
+
+      .face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        pointer-events: none;
+        overflow: hidden;
+      }
+
+      .face.back {
+        display: block;
+        transform: rotateY(180deg);
+        pointer-events: none;
+        width: 100%;
+        height: 100%;
+
+        img {
+          border-radius: 8px;
+          background-repeat: no-repeat;
+          width: 150px;
+          height: 150px;
+          object-fit: cover;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}
+
+
+@media(max-width:1200px) {
+  .game-content {
+    &__panel-info {
+      height: 180px;
+      width: 155px;
+      padding: .5rem;
+    }
+
+    &__cards {
+      width: 670px;
+
+      .cards__card {
+        width: 110px;
+        height: 110px;
+
+        .face.back {
+          img {
+            width: 110px;
+            height: 110px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:992px) {
+  .game-content {
+    &__panel-info {
+      height: 70px;
+      width: 310px;
+      padding: 0 1rem;
+      flex-direction: row;
+      align-items: center;
+
+      &>h3 {
+        &>span {
+          white-space: nowrap;
+        }
+      }
+
+      &>p {
+        &>span {
+          white-space: nowrap;
+        }
+      }
+    }
+
+    &__cards {
+      width: 720px;
+      margin-top: 4.5rem;
+
+      .cards__card {
+        width: 120px;
+        height: 120px;
+
+        .face.back {
+          img {
+            width: 120px;
+            height: 120px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:767px) {
+  .game-content {
+    &__panel-info {
+      height: 50px;
+      font-size: 16px;
+    }
+
+    &__cards {
+      width: 460px;
+      margin-top: 3.5rem;
+
+      .cards__card {
+        width: 76px;
+        height: 76px;
+        margin: 6px;
+
+        .face.back {
+          img {
+            width: 76px;
+            height: 76px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:480px) {
+  .game-content {
+    &__cards {
+      width: 310px;
+      margin-top: 3.5rem;
+
+      .cards__card {
+        width: 62px;
+        height: 62px;
+        margin: 5px;
+
+        .face.back {
+          img {
+            width: 62px;
+            height: 62px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,299 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: crosshair;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow: auto;
+  background: radial-gradient(circle, #e7e8ea 0, #989898 100%);
+}
+
+.instruments {
+  width: 750px;
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.instruments .instruments__mouse-color {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 250px;
+}
+
+.instruments .instruments__mouse-color img {
+  width: 30px;
+  height: 30px;
+}
+
+.instruments .colors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 180px;
+  height: 60px;
+}
+
+.instruments .colors > .color {
+  width: 22px;
+  height: 22px;
+  margin: 2px;
+  border: 1px solid black;
+}
+
+.instruments .width-range {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.instruments .tools {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.instruments .tools label {
+  display: inline-block;
+  font-size: 20px;
+  white-space: nowrap;
+  margin: 10px 0 0 30px;
+}
+
+.instruments .tools label input {
+  width: 18px;
+  height: 18px;
+}
+
+.instruments .tools button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  margin-left: 1px;
+}
+
+.instruments .tools .active {
+  border: 2px solid white;
+}
+
+.instruments .tools #pencil {
+  background: url("img/ico/pencil.png") 0 0/contain no-repeat;
+}
+
+.instruments .tools #eraser {
+  background: url("img/ico/eracerIco.png") 0 0/contain no-repeat;
+}
+
+.instruments .tools #line {
+  background: url("img/ico/line.png") 0 0/contain no-repeat;
+}
+
+.instruments .tools #circle {
+  background: url("img/ico/circle.png") 0 0/contain no-repeat;
+}
+
+.instruments .tools #rectangle {
+  background: url("img/ico/rectangle.png") 0 0/contain no-repeat;
+}
+
+.instruments .tools #right-triangle {
+  background: url("img/ico/triangle.png") 0 0/contain no-repeat;
+}
+
+.instruments .tools #star {
+  background: url("img/ico/star.png") 0 0/contain no-repeat;
+}
+
+.instruments .tools #cloudlet {
+  background: url("img/ico/cloud.png") 0 0/contain no-repeat;
+}
+
+.canvas {
+  display: block;
+  background: #ffffff;
+}
+
+.eraser-cursor {
+  cursor: url("img/ico/eracer.png"), auto;
+}
+
+.clr-btn,
+.save-btn {
+  height: 30px;
+  width: 80px;
+  border-radius: 3px;
+  color: #fff;
+  margin: 2px;
+  text-align: center;
+}
+
+.clr-btn {
+  background: #f14848;
+}
+
+.clr-btn:hover {
+  background: #ee5757;
+}
+
+.clr-btn:active {
+  background: #e93535;
+}
+
+.save-btn {
+  padding: 8px;
+  display: block;
+  background: #4992ff;
+}
+
+.save-btn:hover {
+  background: #5b9cff;
+}
+
+.save-btn:active {
+  background: #3888ff;
+}
+
+@media (max-width: 767px) {
+  .instruments {
+    width: 320px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+/*# sourceMappingURL=style.css.map */

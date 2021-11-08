@@ -1,0 +1,269 @@
+.win-content {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background: radial-gradient(circle, #a7a7a7 0%, #3d3d3d 100%);
+}
+
+.win-content .congratulations {
+  width: 600px;
+  height: 350px;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 1rem 3rem;
+  -webkit-box-shadow: 0px 1px 0px #363636, 0px 2px 0px #363636, 0px 3px 0px #353535, 0px 4px 0px #292929, 0px 5px 0px #252525, 0px 6px 1px rgba(0, 0, 0, 0.1), 0px 0px 5px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 3px 5px rgba(0, 0, 0, 0.2), -4px 8px 8px rgba(0, 0, 0, 0.1), -8px 16px 16px rgba(0, 0, 0, 0.37), -16px 32px 32px rgba(0, 0, 0, 0.25), -32px 64px 64px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 1px 0px #363636, 0px 2px 0px #363636, 0px 3px 0px #353535, 0px 4px 0px #292929, 0px 5px 0px #252525, 0px 6px 1px rgba(0, 0, 0, 0.1), 0px 0px 5px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 3px 5px rgba(0, 0, 0, 0.2), -4px 8px 8px rgba(0, 0, 0, 0.1), -8px 16px 16px rgba(0, 0, 0, 0.37), -16px 32px 32px rgba(0, 0, 0, 0.25), -32px 64px 64px rgba(0, 0, 0, 0.25);
+}
+
+.win-content .congratulations > h2 {
+  font-size: 24px;
+  text-align: center;
+}
+
+.win-content .congratulations > h2 > span {
+  color: var(--orange-color);
+}
+
+.win-content .congratulations .congratulations__user-data {
+  width: 150px;
+  height: 40px;
+  background: var(--white-color);
+  color: var(--black-color);
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.win-content .congratulations > .btn {
+  margin-top: 1rem;
+  width: 150px;
+  height: 50px;
+}
+
+.win-content .all-results {
+  width: 400px;
+  height: 420px;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-bottom-left-radius: 30px;
+  padding: 1rem;
+  -webkit-box-shadow: 0px 1px 0px #363636, 0px 2px 0px #363636, 0px 3px 0px #353535, 0px 4px 0px #292929, 0px 5px 0px #252525, 0px 6px 1px rgba(0, 0, 0, 0.1), 0px 0px 5px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 3px 5px rgba(0, 0, 0, 0.2), -4px 8px 8px rgba(0, 0, 0, 0.1), -8px 16px 16px rgba(0, 0, 0, 0.37), -16px 32px 32px rgba(0, 0, 0, 0.25), -32px 64px 64px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 1px 0px #363636, 0px 2px 0px #363636, 0px 3px 0px #353535, 0px 4px 0px #292929, 0px 5px 0px #252525, 0px 6px 1px rgba(0, 0, 0, 0.1), 0px 0px 5px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 3px 5px rgba(0, 0, 0, 0.2), -4px 8px 8px rgba(0, 0, 0, 0.1), -8px 16px 16px rgba(0, 0, 0, 0.37), -16px 32px 32px rgba(0, 0, 0, 0.25), -32px 64px 64px rgba(0, 0, 0, 0.25);
+  -webkit-transform: translateY(-115%);
+          transform: translateY(-115%);
+}
+
+.win-content .all-results > p {
+  text-align: center;
+  color: var(--orange-color);
+  font-size: 24px;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.win-content .all-results .records-buttons > p {
+  display: inline;
+}
+
+.win-content .all-results .records-buttons > .rec-but {
+  width: 80px;
+  height: 25px;
+  border-radius: 20px 20px 0 0;
+  color: var(--black-color);
+  font-weight: 700;
+  font-size: 20px;
+  background-color: var(--dark-gray-color);
+  margin: 0 3px;
+}
+
+.win-content .all-results .records-buttons > .rec-but:hover {
+  background-color: #adadad;
+}
+
+.win-content .all-results .records-buttons .active {
+  background-color: var(--orange-color);
+}
+
+.win-content .all-results .records-buttons .active:hover {
+  background-color: var(--orange-hover-color);
+}
+
+.win-content .all-results > table th {
+  text-align: start;
+  color: var(--dark-gray-color);
+}
+
+.win-content .all-results > table td {
+  text-align: start;
+  white-space: nowrap;
+}
+
+.win-content .all-results > table .place,
+.win-content .all-results > table .step {
+  width: 60px;
+}
+
+.win-content .all-results > table .nick {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 160px;
+  display: inline-block;
+}
+
+.win-content .all-results > table .time {
+  width: 90px;
+}
+
+.cup-btn {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: url("/assets/img/ico/cup.png") 0 0/cover;
+  z-index: 2;
+}
+
+.cup-btn .badge {
+  -webkit-animation: pulse 2s infinite;
+          animation: pulse 2s infinite;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #ffa800;
+  z-index: 0;
+}
+
+.hide-btn {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  background: url("/assets/img/ico/x.png") 0 0/cover;
+  -webkit-filter: invert(45%) sepia(86%) saturate(2474%) hue-rotate(335deg) brightness(114%) contrast(115%);
+          filter: invert(45%) sepia(86%) saturate(2474%) hue-rotate(335deg) brightness(114%) contrast(115%);
+  z-index: 2;
+}
+
+.hide-btn:hover {
+  -webkit-filter: invert(37%) sepia(78%) saturate(742%) hue-rotate(328deg) brightness(89%) contrast(96%);
+          filter: invert(37%) sepia(78%) saturate(742%) hue-rotate(328deg) brightness(89%) contrast(96%);
+}
+
+.hide-btn:active {
+  -webkit-filter: invert(25%) sepia(43%) saturate(1516%) hue-rotate(331deg) brightness(103%) contrast(94%);
+          filter: invert(25%) sepia(43%) saturate(1516%) hue-rotate(331deg) brightness(103%) contrast(94%);
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    opacity: 0.4;
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.4;
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+}
+
+@media (max-width: 767px) {
+  .win-content .congratulations {
+    width: 310px;
+    height: 380px;
+    top: 130px;
+  }
+  .win-content .congratulations > h2 {
+    font-size: 20px;
+    margin: 1rem 0;
+  }
+  .win-content .congratulations .congratulations__user-data {
+    width: 150px;
+    height: 30px;
+  }
+  .win-content .congratulations > .btn {
+    margin-top: 1.5rem;
+    height: 40px;
+  }
+  .win-content .all-results {
+    width: 310px;
+    height: 400px;
+  }
+  .win-content .all-results > p {
+    font-size: 22px;
+  }
+  .win-content .all-results > table {
+    font-size: 18px;
+  }
+  .win-content .all-results > table th {
+    text-align: start;
+  }
+  .win-content .all-results > table td {
+    text-align: start;
+  }
+  .win-content .all-results > table .nick {
+    width: 130px;
+  }
+  .win-content .all-results > table .place,
+  .win-content .all-results > table .step {
+    text-align: center;
+  }
+  .win-content .cup-btn {
+    width: 40px;
+    height: 40px;
+    top: 20px;
+    right: 20px;
+  }
+  .win-content .cup-btn .badge {
+    width: 40px;
+    height: 40px;
+  }
+}
+/*# sourceMappingURL=win.component.css.map */

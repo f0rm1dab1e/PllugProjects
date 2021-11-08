@@ -1,0 +1,161 @@
+/*Zero style*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+a {
+  text-decoration: none
+}
+
+/*--------------------*/
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@media print {
+  .isPrinting>* {
+    display: none;
+  }
+
+  .isPrinting app-print-layout {
+    display: block;
+  }
+}
+
+:root {
+  --black-color: #141414;
+  --white-color: #f7f7f7;
+  --gray-color: #e7e8ea;
+  --dark-gray-color: #989898;
+  --orange-color: #ff5e41;
+  --orange-hover-color: #cf4b34;
+  --orange-active-color: #a03b29;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+html,
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  line-height: 1.2;
+  width: 100%;
+  height: 100%;
+}
+
+.btn {
+  width: 140px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: var(--orange-color);
+  color: var(--white-color);
+  margin: 0 0.5rem;
+  transition: all .3s ease;
+  font-size: 20px;
+  font-weight: 600;
+  user-select: none;
+
+  &:hover {
+    background-color: var(--orange-hover-color);
+  }
+
+  &:active {
+    background-color: var(--orange-active-color);
+  }
+
+  &:disabled {
+    color: #555455;
+    background-color: hsl(300, 2%, 23%);
+    cursor: not-allowed;
+  }
+}

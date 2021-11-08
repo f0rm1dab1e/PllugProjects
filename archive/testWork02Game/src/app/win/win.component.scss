@@ -1,0 +1,248 @@
+.win-content {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background: radial-gradient(circle, rgb(167, 167, 167) 0%, rgb(61, 61, 61) 100%);
+
+  .congratulations {
+    width: 600px;
+    height: 350px;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: space-evenly;
+    padding: 1rem 3rem;
+    box-shadow: 0px 1px 0px rgb(54, 54, 54), 0px 2px 0px #363636, 0px 3px 0px rgb(53, 53, 53), 0px 4px 0px #292929, 0px 5px 0px rgb(37, 37, 37), 0px 6px 1px rgba(0, 0, 0, 0.1), 0px 0px 5px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 3px 5px rgba(0, 0, 0, 0.2), -4px 8px 8px rgba(0, 0, 0, 0.1), -8px 16px 16px rgba(0, 0, 0, 0.37), -16px 32px 32px rgba(0, 0, 0, 0.25), -32px 64px 64px rgba(0, 0, 0, 0.25);
+
+    &>h2 {
+      font-size: 24px;
+      text-align: center;
+
+      &>span {
+        color: var(--orange-color);
+      }
+    }
+
+    .congratulations__user-data {
+      width: 150px;
+      height: 40px;
+      background: var(--white-color);
+      color: var(--black-color);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &>.btn {
+      margin-top: 1rem;
+      width: 150px;
+      height: 50px;
+    }
+  }
+
+  .all-results {
+    width: 400px;
+    height: 420px;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-bottom-left-radius: 30px;
+    padding: 1rem;
+    box-shadow: 0px 1px 0px rgb(54, 54, 54), 0px 2px 0px #363636, 0px 3px 0px rgb(53, 53, 53), 0px 4px 0px #292929, 0px 5px 0px rgb(37, 37, 37), 0px 6px 1px rgba(0, 0, 0, 0.1), 0px 0px 5px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 3px 5px rgba(0, 0, 0, 0.2), -4px 8px 8px rgba(0, 0, 0, 0.1), -8px 16px 16px rgba(0, 0, 0, 0.37), -16px 32px 32px rgba(0, 0, 0, 0.25), -32px 64px 64px rgba(0, 0, 0, 0.25);
+    transform: translateY(-115%);
+
+    &>p {
+      text-align: center;
+      color: var(--orange-color);
+      font-size: 24px;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .records-buttons {
+      &>p {
+        display: inline;
+      }
+
+      &>.rec-but {
+        width: 80px;
+        height: 25px;
+        border-radius: 20px 20px 0 0;
+        color: var(--black-color);
+        font-weight: 700;
+        font-size: 20px;
+        background-color: var(--dark-gray-color);
+        margin: 0 3px;
+
+        &:hover {
+          background-color: #adadad;
+        }
+      }
+
+      .active {
+        background-color: var(--orange-color);
+
+        &:hover {
+          background-color: var(--orange-hover-color);
+        }
+      }
+    }
+
+    &>table {
+      th {
+        text-align: start;
+        color: var(--dark-gray-color);
+      }
+
+      td {
+        text-align: start;
+        white-space: nowrap;
+      }
+
+      .place,
+      .step {
+        width: 60px;
+      }
+
+      .nick {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 160px;
+        display: inline-block;
+      }
+
+      .time {
+        width: 90px;
+      }
+    }
+  }
+}
+
+.cup-btn {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: url('/assets/img/ico/cup.png') 0 0 / cover;
+  z-index: 2;
+
+  .badge {
+    animation: pulse 2s infinite;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #ffa800;
+    z-index: 0;
+  }
+}
+
+.hide-btn {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  background: url('/assets/img/ico/x.png') 0 0 / cover;
+  filter: invert(45%) sepia(86%) saturate(2474%) hue-rotate(335deg) brightness(114%) contrast(115%);
+  z-index: 2;
+
+  &:hover {
+    filter: invert(37%) sepia(78%) saturate(742%) hue-rotate(328deg) brightness(89%) contrast(96%);
+  }
+
+  &:active {
+    filter: invert(25%) sepia(43%) saturate(1516%) hue-rotate(331deg) brightness(103%) contrast(94%);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.4;
+    transform: scale(0.6);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+@media(max-width:767px) {
+  .win-content {
+    .congratulations {
+      width: 310px;
+      height: 380px;
+      top: 130px;
+
+      &>h2 {
+        font-size: 20px;
+        margin: 1rem 0;
+      }
+
+      .congratulations__user-data {
+        width: 150px;
+        height: 30px;
+      }
+
+      &>.btn {
+        margin-top: 1.5rem;
+        height: 40px;
+      }
+    }
+
+    .all-results {
+      width: 310px;
+      height: 400px;
+
+      &>p {
+        font-size: 22px;
+      }
+
+      &>table {
+        font-size: 18px;
+
+        th {
+          text-align: start;
+        }
+
+        td {
+          text-align: start;
+        }
+
+        .nick {
+          width: 130px;
+        }
+
+        .place,
+        .step {
+          text-align: center;
+        }
+      }
+    }
+
+    .cup-btn {
+      width: 40px;
+      height: 40px;
+      top: 20px;
+      right: 20px;
+
+      .badge {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}
